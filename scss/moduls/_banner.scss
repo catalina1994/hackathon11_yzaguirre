@@ -1,0 +1,13 @@
+.banner{
+    background-color: $color-secundary;
+
+    &__caption{
+        padding: 3em  3em  ;
+        color: $color-third;
+        text-align: center;
+        h2{
+            font-size:$font-size-xlarge ;
+            margin-bottom: .5em;
+        }
+    }
+}

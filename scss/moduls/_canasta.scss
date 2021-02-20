@@ -1,0 +1,29 @@
+.canasta__container{
+    position: relative;
+    &:hover .canasta{
+        transform: scale(1);
+    }
+}
+.canasta{
+    transform: scale(0);
+    position:absolute;
+    right: 0;
+    width: 400px;
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba( #000000, .3);
+    background-color: #fff;
+    &__item{
+        display: flex;
+        align-items: center;
+        padding: .5em 0;
+        justify-content: space-between;
+        margin-bottom: .5em;
+        border-bottom: 1px solid gray;
+        div{
+            width: 20%;
+            text-align: center;
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+.card__container{
+    @include mediaQ(480px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+}
+
+.card{
+    box-shadow: 1px 1px 5px rgba( #000000, .5);
+    margin-bottom: 1em;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    transition: background-color .5s , border-bottom .5s;
+    @include mediaQ(480px){
+        width: 48%;
+      }
+      @include mediaQ(769px){
+        width: 31%;
+      }
+    &__img{
+        overflow: hidden;
+        img:hover{
+            transition: transform .7s ease-in;
+            transform: scale(1.3);
+        }
+    }
+    &__caption{
+        padding: 2em 2em;
+
+    }
+    &__title{
+        margin-bottom: .5em;
+        color: rgb(32, 32, 32);
+    }
+    &__precio {
+        p:nth-child(1){
+        text-decoration: line-through;
+    }
+
+}}
