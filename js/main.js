@@ -16,9 +16,11 @@ function initAPP(){
     canasta.addEventListener('click', eliminarCurso),
     TotalCanasta.addEventListener('click', eliminarCanasta)
 }
+//
 
 // FUNCIONES
 function obtenerCurso(e){
+    e.preventDefault()
     if(e.target.classList.contains('btn-block')){
         const curso = e.target.parentElement; 
         extraerDatos(curso);
@@ -60,6 +62,11 @@ function eliminarCurso(e){
 function eliminarCanasta(e){
     if(e.target.classList.contains('btn-line')){
         const hermano = e.target.previousElementSibling.querySelector('.agregados')
-        hermano.remove()
+        while (hermano.firstChild) {
+            hermano.removeChild(hermano.firstChild);
+          }
+        //hermano.remove()
+        
     }
+    
 }
